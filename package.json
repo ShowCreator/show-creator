@@ -1,0 +1,33 @@
+{
+  "name": "show-creator",
+  "version": "0.0.2",
+  "description": "scripts",
+  "main": "lib/index.js",
+  "types": "lib",
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "show-creator": "/bin/sc.js"
+  },
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.1",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^9.2.4",
+    "log-symbols": "^5.1.0",
+    "ora": "^6.3.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.1"
+  }
+}
