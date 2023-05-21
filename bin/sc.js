@@ -12,6 +12,8 @@ const build = require('./build.js');
   program
     .command('build')
     .description('build project')
+    .allowUnknownOption()
+    .option('--config <config>', 'use custom config')
     .action(build);
     
   program.parse(process.argv)

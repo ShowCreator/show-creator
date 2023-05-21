@@ -1,12 +1,17 @@
 #!/usr/bin/env node
-const build = require('../lib/index.js');
+const parse = require('yargs-parser');
+const build = require('../lib/command/build');
 
 module.exports = async () => {
-
+  const parseArg = parse(process.argv.slice(2), {
+    configuration: { 'strip-dashed': true },
+  })
+  // ignore _ in parseArg
+  delete parseArg._;
   try {
     console.log('sam-ttttest');
     await build({
-      args: {  },
+      args: { ...parseArg },
     });
   } catch (err) {
     console.error(err);

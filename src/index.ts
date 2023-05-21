@@ -2,11 +2,13 @@
  * @Author: sfy
  * @Date: 2023-05-19 15:55:31
  * @LastEditors: sfy
- * @LastEditTime: 2023-05-19 23:31:04
+ * @LastEditTime: 2023-05-21 13:38:00
  * @FilePath: /sc-cli/src/index.ts
  * @Description: update here
  */
 
-export = async function () {
-  console.log("22");
-};
+import build = require('./command/build')
+
+export {
+  build
+}
