@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const parse = require('yargs-parser');
-const build = require('../lib/command/build');
+// const start = require('../lib/command/start');
 
 module.exports = async () => {
   const parseArg = parse(process.argv.slice(2), {
@@ -9,12 +9,13 @@ module.exports = async () => {
   // ignore _ in parseArg
   delete parseArg._;
   try {
-    console.log('sam-ttttest');
-    await build({
-      args: { ...parseArg },
-    });
+    require('../lib/command/start')
+    // await start({
+    //   args: { ...parseArg },
+    // });
+    // console.log('ttt')
   } catch (err) {
-    log.error(err.message);
+    // log.error(err.message);
     console.error(err);
     process.exit(1);
   }

@@ -1,0 +1,53 @@
+{
+  "entry": {
+    "index": "./src/index.tsx"
+  },
+  "devServer": {
+    "host": "local.dev.eimos.com",
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
+    },
+    "proxy": {
+      "/static": {
+        "target": "http://dev.eimos.com",
+        "changeOrigin": true
+      },
+      "/upload/static": {
+        "target": "http://dev.eimos.com",
+        "changeOrigin": true
+      },
+      "/api": {
+        "target": "http://dev.eimos.com",
+        "changeOrigin": true
+      },
+      "/map": {
+        "target": "http://dev.eimos.com",
+        "changeOrigin": true
+      },
+      "/workspace/order360": {
+        "target": "http://172.16.21.182:9012",
+        "changeOrigin": true
+      }
+    }
+
+  },
+  "alias": {
+    "@": "./src"
+  },
+  "publicPath": "/appStore/",
+  "sourceMap": true,
+  "outputDir": "appStore",
+  "library": "appStore",
+  "libraryTarget": "umd",
+  "externals": {
+    "react": "var window.React",
+    "react-dom": "var window.ReactDOM",
+    "prop-types": "var window.PropTypes",
+    "moment": "var window.moment",
+    "lodash-es": "var window._",
+    "^lodash$": "var window._",
+    "^lodash/(.*)$": "var window._.$1",
+    "antd": "var window.antd",
+    "@bui/lcp-pro": "var window.LcpPro"
+  }
+}

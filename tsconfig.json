@@ -2,9 +2,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "moduleResolution": "node",
-    "strict": true,
+    "strict": false,
     "strictNullChecks": false,
     "jsx": "react",
+    "allowJs": true,
     "target": "es6",
     "experimentalDecorators": true,
     "skipLibCheck": true,
@@ -18,5 +19,5 @@
     "types": ["node"],
     "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "exclude": ["test", "lib"]
+  "exclude": ["test", "lib", "example"]
 }

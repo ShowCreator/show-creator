@@ -2,9 +2,10 @@
 const program = require('commander');
 const packageInfo = require('../package.json');
 const build = require('./build.js');
+const start = require('./start.js')
 
 
-(async () => {
+// (async () => {
   console.log(packageInfo.name, packageInfo.version);
   program.version(packageInfo.version).usage('<command> [options]');
   // finish check before run command
@@ -15,6 +16,13 @@ const build = require('./build.js');
     .allowUnknownOption()
     .option('--config <config>', 'use custom config')
     .action(build);
+
+  program
+    .command('start')
+    .description('start project')
+    .allowUnknownOption()
+    .option('--config <config>', 'use custom config')
+    .action(start);
     
   program.parse(process.argv)
-})();
+// })();
