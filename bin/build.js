@@ -9,12 +9,10 @@ module.exports = async () => {
   // ignore _ in parseArg
   delete parseArg._;
   try {
-    console.log('sam-ttttest');
     await build({
       args: { ...parseArg },
     });
   } catch (err) {
-    log.error(err.message);
     console.error(err);
     process.exit(1);
   }

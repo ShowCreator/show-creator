@@ -19,5 +19,10 @@
     "types": ["node"],
     "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "exclude": ["test", "lib", "example"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.js",
+  ],
+  "exclude": ["test", "lib", "example", "bin"]
 }

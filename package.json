@@ -1,5 +1,5 @@
 {
-  "name": "show-creator",
+  "name": "@bui/build-scripts",
   "version": "0.0.2",
   "description": "scripts",
   "main": "lib/index.js",
@@ -9,7 +9,7 @@
     "bin"
   ],
   "bin": {
-    "show-creator": "/bin/sc.js"
+    "bui-build-scripts": "/bin/bbs.js"
   },
   "scripts": {
     "start": "tsc -w",
@@ -24,6 +24,7 @@
     "@svgr/webpack": "^8.1.0",
     "babel-loader": "^9.1.3",
     "babel-preset-react-app": "^10.0.1",
+    "bfj": "^7.0.2",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "chalk": "^5.2.0",
     "commander": "^10.0.1",
@@ -55,6 +56,7 @@
     "yargs-parser": "^21.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/node": "^20.2.1",
     "@types/npmlog": "^4.1.4"
   }

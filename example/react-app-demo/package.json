@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "show-creator build --dev build.dev.json ",
-    "start": "show-creator start --dev build.dev.json "
+    "build": "bui-build-scripts build",
+    "start": "bui-build-scripts start --dev build.dev.json "
   },
   "keywords": [],
   "author": "",
